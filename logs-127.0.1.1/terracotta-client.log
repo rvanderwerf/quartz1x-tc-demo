@@ -1,0 +1,331 @@
+2012-07-05 23:45:59,495 [pool-5-thread-1] INFO com.terracottatech.general - New logging session started.
+2012-07-05 23:45:59,513 [pool-5-thread-1] INFO com.terracottatech.console - Terracotta 3.4.1, as of 20110207-140209 (Revision 17116 by jvoegele@Wintermute.local from 3.4.1)
+2012-07-05 23:45:59,534 [pool-5-thread-1] INFO com.tc.config.schema.setup.StandardXMLFileConfigurationCreator - Attempting to load configuration from the file at '/opt/terracotta-3.4.1/tc-config.xml'...
+2012-07-05 23:45:59,818 [pool-5-thread-1] INFO com.terracottatech.console - Successfully loaded base configuration from file at '/opt/terracotta-3.4.1/tc-config.xml'.
+2012-07-05 23:45:59,818 [pool-5-thread-1] INFO com.tc.config.schema.setup.StandardXMLFileConfigurationCreator - The configuration specified by 'base configuration from file at '/opt/terracotta-3.4.1/tc-config.xml'':
+
+<!--All content copyright Terracotta, Inc., unless otherwise indicated. All rights reserved.-->
+<tc:tc-config xsi:schemaLocation="http://www.terracotta.org/schema/terracotta-6.xsd" xmlns:tc="http://www.terracotta.org/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!--Tell DSO where the Terracotta server can be found; 
+       See 
+       - Terracotta Configuration Guide and Reference 
+       - About Terracotta Configuration Files
+       for additional information.-->
+  <servers>
+    <server host="127.0.1.1" name="sample" bind="0.0.0.0">
+      <dso-port>9510</dso-port>
+      <jmx-port>9520</jmx-port>
+      <data>terracotta/demo-server/server-data</data>
+      <logs>terracotta/demo-server/server-logs</logs>
+      <statistics>terracotta/demo-server/server-statistics</statistics>
+    </server>
+  </servers>
+</tc:tc-config>
+2012-07-05 23:45:59,859 [pool-5-thread-1] INFO com.tc.config.schema.setup.StandardXMLFileConfigurationCreator - Attempting to load configuration from the file at '/tmp/tc-config4768036386146557658.xml'...
+2012-07-05 23:45:59,862 [pool-5-thread-1] INFO com.terracottatech.console - Successfully loaded base configuration from file at '/tmp/tc-config4768036386146557658.xml'.
+2012-07-05 23:45:59,863 [pool-5-thread-1] INFO com.tc.config.schema.setup.StandardXMLFileConfigurationCreator - The configuration specified by 'base configuration from file at '/tmp/tc-config4768036386146557658.xml'':
+
+<tc-config xmlns="http://www.terracotta.org/config">
+  <clients xmlns:tc="http://www.terracotta.org/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="">
+    <modules>
+      <module name="terracotta-toolkit-1.1" group-id="org.terracotta.toolkit"/>
+    </modules>
+  </clients>
+  <servers xmlns:tc="http://www.terracotta.org/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="">
+    <server host="127.0.1.1" name="sample" bind="0.0.0.0">
+      <dso-port>9510</dso-port>
+      <jmx-port>9520</jmx-port>
+      <data>terracotta/demo-server/server-data</data>
+      <logs>terracotta/demo-server/server-logs</logs>
+      <statistics>terracotta/demo-server/server-statistics</statistics>
+    </server>
+  </servers>
+</tc-config>
+2012-07-05 23:45:59,888 [pool-5-thread-1] INFO com.tc.properties.TCProperties - Loading default properties from tc.properties
+2012-07-05 23:45:59,888 [pool-5-thread-1] INFO com.tc.properties.TCProperties - The property "tc.config.getFromSource.timeout" was read before initialization completed. "tc.config.getFromSource.timeout" = 30000
+2012-07-05 23:45:59,888 [pool-5-thread-1] INFO com.tc.properties.TCProperties - tc-config doesn't have any tc-property. No tc-property will be overridden
+2012-07-05 23:45:59,888 [pool-5-thread-1] INFO com.tc.properties.TCProperties - Loaded TCProperties : TCProperties = { cvt.buffer.randomsuffix.enabled = false, cvt.client.fail.buffer.open = false, cvt.rest.interface.enabled = true, cvt.retriever.notification.interval = 60, cvt.statistics.logging.interval = 900, cvt.store.randomsuffix.enabled = false, dev.console.max.operator.events = 5000, ehcache.clusterAllCacheManagers = true, ehcache.concurrency = 128, ehcache.evictor.logging.enabled = false, ehcache.evictor.pool.size = 1, ehcache.global.eviction.enable = true, ehcache.global.eviction.frequency = 10, ehcache.global.eviction.rest.timeMillis = 10, ehcache.global.eviction.segments = 2, ehcache.lock.readLevel = READ, ehcache.lock.writeLevel = WRITE, ehcache.logging.enabled = false, ehcache.storageStrategy.dcv2.localcache.enabled = true, ehcache.storageStrategy.dcv2.localcache.incoherentReadTimeout = 300000, ehcache.storageStrategy.dcv2.perElementTTITTL.enabled = false, ehcache.storageStrategy.dcv2.periodicEviction.enabled = true, ehcache.storageStrategy.dcv2.pinSegments.enabled = true, http.defaultservlet.attribute.aliases = false;, http.defaultservlet.attribute.dirallowed = false;, http.defaultservlet.enabled = false;, instrumentation.finalField.fastRead = true, l1.cachemanager.criticalObjectThreshold = -1, l1.cachemanager.criticalThreshold = 90, l1.cachemanager.enabled = true, l1.cachemanager.leastCount = 2, l1.cachemanager.logging.enabled = false, l1.cachemanager.monitorOldGenOnly = true, l1.cachemanager.percentageToEvict = 10, l1.cachemanager.sleepInterval = 3000, l1.cachemanager.threshold = 70, l1.connect.versionMatchCheck.enabled = true, l1.healthcheck.l2.bindAddress = 0.0.0.0, l1.healthcheck.l2.bindPort = 0, l1.healthcheck.l2.ping.enabled = true, l1.healthcheck.l2.ping.idletime = 5000, l1.healthcheck.l2.ping.interval = 1000, l1.healthcheck.l2.ping.probes = 3, l1.healthcheck.l2.socketConnect = true, l1.healthcheck.l2.socketConnectCount = 13, l1.healthcheck.l2.socketConnectTimeout = 5, l1.jvm.check.compatibility = true, l1.l2.config.validation.enabled = true, l1.lock.statistics.gatherInterval = 1, l1.lock.statistics.traceDepth = 0, l1.lockmanager.striped.count = 128, l1.lockmanager.timeout.interval = 60000, l1.max.connect.retries = -1, l1.modules.additional = , l1.modules.default = org.terracotta.modules.excludes-config;bundle-version:=3.4.1,org.terracotta.modules.guimodels-config;bundle-version:=3.4.1,org.terracotta.modules.jdk15-preinst-config;bundle-version:=3.4.1,org.terracotta.modules.standard-config;bundle-version:=3.4.1, l1.modules.repositories = , l1.modules.tc-version-check = , l1.modules.toolkitSearchRange = 100, l1.objectmanager.fault.logging.enabled = false, l1.objectmanager.flush.logging.enabled = false, l1.objectmanager.objectid.request.size = 50000, l1.objectmanager.remote.batchLookupTimePeriod = 1, l1.objectmanager.remote.logging.enabled = false, l1.objectmanager.remote.maxDNALRUSize = 60, l1.objectmanager.remote.maxRequestSentImmediately = 4, l1.seda.stage.sink.capacity = -1, l1.serverarray.objectCreationStrategy = round-robin, l1.serverarray.objectCreationStrategy.groupAffinity.groupName = mirror-group1, l1.serverarray.objectCreationStrategy.roundRobin.startIndex = sequential, l1.servermapmanager.remote.batchLookupTimePeriod = 1, l1.servermapmanager.remote.maxRequestSentImmediately = 4, l1.shutdown.threadgroup.gracetime = 30000, l1.socket.connect.timeout = 10000, l1.socket.reconnect.waitInterval = 1000, l1.transactionmanager.completedAckFlushTimeout = 5000, l1.transactionmanager.folding.debug = false, l1.transactionmanager.folding.enabled = true, l1.transactionmanager.folding.lock.limit = 0, l1.transactionmanager.folding.object.limit = 0, l1.transactionmanager.logging.enabled = false, l1.transactionmanager.maxBatchSizeInKiloBytes = 128, l1.transactionmanager.maxOutstandingBatchSize = 4, l1.transactionmanager.maxPendingBatches = 88, l1.transactionmanager.maxSleepTimeBeforeHalt = 1024, l1.transactionmanager.strings.compress.enabled = true, l1.transactionmanager.strings.compress.logging.enabled = false, l1.transactionmanager.strings.compress.minSize = 512, l1.transactionmanager.timeoutForAckOnExit = 300, l2.beanshell.enabled = false, l2.beanshell.port = 9929, l2.berkeleydb.je.checkpointer.bytesInterval = 100000000, l2.berkeleydb.je.cleaner.bytesInterval = 20000000, l2.berkeleydb.je.cleaner.detailMaxMemoryPercentage = 5, l2.berkeleydb.je.cleaner.lookAheadCacheSize = 32768, l2.berkeleydb.je.cleaner.minAge = 5, l2.berkeleydb.je.lock.nLockTables = 7, l2.berkeleydb.je.lock.timeout = 180000000, l2.berkeleydb.je.maxMemoryPercent = 25, l2.cachemanager.criticalObjectThreshold = -1, l2.cachemanager.criticalThreshold = 90, l2.cachemanager.enabled = true, l2.cachemanager.leastCount = 2, l2.cachemanager.logging.enabled = false, l2.cachemanager.monitorOldGenOnly = true, l2.cachemanager.percentageToEvict = 10, l2.cachemanager.sleepInterval = 3000, l2.cachemanager.threshold = 70, l2.data.backup.throttle.timeInMillis = 0, l2.dump.on.exception.timeout = 30, l2.healthcheck.l1.ping.enabled = true, l2.healthcheck.l1.ping.idletime = 5000, l2.healthcheck.l1.ping.interval = 1000, l2.healthcheck.l1.ping.probes = 3, l2.healthcheck.l1.socketConnect = true, l2.healthcheck.l1.socketConnectCount = 10, l2.healthcheck.l1.socketConnectTimeout = 5, l2.healthcheck.l2.ping.enabled = true, l2.healthcheck.l2.ping.idletime = 5000, l2.healthcheck.l2.ping.interval = 1000, l2.healthcheck.l2.ping.probes = 3, l2.healthcheck.l2.socketConnect = true, l2.healthcheck.l2.socketConnectCount = 10, l2.healthcheck.l2.socketConnectTimeout = 5, l2.l1reconnect.enabled = false, l2.l1reconnect.maxDelayedAcks = 16, l2.l1reconnect.sendWindow = 32, l2.l1reconnect.sendqueue.cap = 5000, l2.l1reconnect.timeout.millis = 2000, l2.lfu.agingFactor = 1, l2.lfu.debug.enabled = false, l2.lfu.recentlyAccessedIgnorePercentage = 20, l2.lockmanager.greedy.lease.enabled = true, l2.lockmanager.greedy.lease.leaseTimeInMillis = 50, l2.lockmanager.greedy.locks.enabled = true, l2.nha.autoRestart = true, l2.nha.dirtydb.autoDelete = true, l2.nha.dirtydb.rolling = 0, l2.nha.send.timeout.millis = 16000, l2.nha.tcgroupcomm.discovery.interval = 1000, l2.nha.tcgroupcomm.handshake.timeout = 5000, l2.nha.tcgroupcomm.reconnect.enabled = false, l2.nha.tcgroupcomm.reconnect.maxDelayedAcks = 16, l2.nha.tcgroupcomm.reconnect.sendWindow = 32, l2.nha.tcgroupcomm.reconnect.sendqueue.cap = 5000, l2.nha.tcgroupcomm.reconnect.timeout = 2000, l2.objectmanager.cachePolicy = lfu, l2.objectmanager.deleteBatchSize = 5000, l2.objectmanager.dgc.enterpriseMarkStageInterval = 1000, l2.objectmanager.dgc.faulting.optimization = true, l2.objectmanager.dgc.throttle.requestsPerThrottle = 1000, l2.objectmanager.dgc.throttle.timeInMillis = 0, l2.objectmanager.dgc.young.enabled = false, l2.objectmanager.dgc.young.frequencyInMillis = 180000, l2.objectmanager.fault.logging.enabled = false, l2.objectmanager.flush.logging.enabled = false, l2.objectmanager.loadObjectID.checkpoint.maxlimit = -1, l2.objectmanager.loadObjectID.checkpoint.maxsleep = 10000, l2.objectmanager.loadObjectID.longsPerDiskEntry = 8, l2.objectmanager.loadObjectID.mapsdatabase.longsPerDiskEntry = 1, l2.objectmanager.maxObjectsInTxnObjGrouping = 5000, l2.objectmanager.maxObjectsToCommit = 5000, l2.objectmanager.maxTxnsInTxnObjectGrouping = 500, l2.objectmanager.objectrequest.logging.enabled = false, l2.objectmanager.objectrequest.split.size = 500, l2.objectmanager.passive.sync.batch.size = 500, l2.objectmanager.passive.sync.throttle.timeInMillis = 0, l2.objectmanager.persistor.logging.enabled = false, l2.objectmanager.request.logging.enabled = false, l2.offHeapCache.map.concurrency = 1, l2.offHeapCache.map.initialDataSize = 10k, l2.offHeapCache.map.percentage = 25, l2.offHeapCache.map.tableSize = 1k, l2.offHeapCache.max.chunk.size = 512m, l2.offHeapCache.min.chunk.size = 32m, l2.offHeapCache.operator.event.generator.sleepInterval = 60000, l2.offHeapCache.operator.event.generator.threshold = 80, l2.operator.events.store = 1500, l2.remotejmx.idletime = 5, l2.remotejmx.maxthreads = 50, l2.seda.commitstage.threads = 4, l2.seda.evictionprocessorstage.sink.capacity = 1000, l2.seda.gcdeletestage.threads = 1, l2.seda.stage.sink.capacity = -1, l2.serverarray.2pc.enabled = true, l2.startuplock.retries.enabled = false, l2.transactionmanager.logging.enabled = false, l2.transactionmanager.logging.printBroadcastStats = false, l2.transactionmanager.logging.printCommits = false, l2.transactionmanager.logging.printStats = true, l2.transactionmanager.logging.verbose = false, l2.transactionmanager.passive.throttle.enabled = true, l2.transactionmanager.passive.throttle.maxSleepSeconds = 5, l2.transactionmanager.passive.throttle.threshold = 20000, lock.statistics.enabled = false, logging.longgc.threshold = 8000, logging.maxBackups = 20, logging.maxLogFileSize = 512, memory.monitor.forcebasic = false, net.core.keepalive = false, net.core.tcpnodelay = true, session.debug.hops = false, session.debug.hops.interval = 100, session.debug.invalidate = false, session.debug.sessions = false, session.invalidator.bench.enabled = true, session.invalidator.sleep = 300, session.request.bench.enabled = false, session.request.tracking = false, session.request.tracking.dump = false, session.request.tracking.interval = 2500, session.request.tracking.threshold = 15000, session.statistics.enabled = false, session.verify.set.attribute = false, session.vhosts.excluded = , stats.printer.intervalInMillis = 5000, tc.bytebuffer.common.pool.maxcount = 3000, tc.bytebuffer.pooling.enabled = true, tc.bytebuffer.threadlocal.pool.maxcount = 2000, tc.config.getFromSource.timeout = 30000, tc.management.mbeans.enabled = true, tc.management.test.mbeans.enabled = false, tc.messages.grouping.enabled = true, tc.messages.grouping.maxSizeKiloBytes = 1024, tc.stage.monitor.delay = 5000, tc.stage.monitor.enabled = false, tc.transport.handshake.timeout = 10000, tcm.monitor.delay = 5, tcm.monitor.enabled = false }
+2012-07-05 23:45:59,972 [pool-5-thread-1] INFO com.terracottatech.console - Log file: '/home/ryanv/gr8conf/quartz1x-tc-demo/logs-127.0.1.1/terracotta-client.log'.
+2012-07-05 23:45:59,972 [pool-5-thread-1] INFO com.tc.logging.TCLogging - All Java System Properties for this Terracotta instance:
+========================================================================
+JVM arguments: [-agentlib:jdwp=transport=dt_socket,address=127.0.0.1:45389,suspend=y,server=n, -Dgrails.home=/opt/grails-2.0.4, -Dbase.dir=/home/ryanv/gr8conf/quartz1x-tc-demo, -Dtools.jar=/usr/lib/jvm/java-7-oracle/lib/tools.jar, -Dgroovy.starter.conf=/opt/grails-2.0.4/conf/groovy-starter.conf, -Xmx512M, -XX:MaxPermSize=192m, -javaagent:/opt/idea-IU-117.117/plugins/Groovy/lib/agent/gragent.jar, -Dfile.encoding=UTF-8]
+awt.toolkit                                     : sun.awt.X11.XToolkit
+base.dir                                        : /home/ryanv/gr8conf/quartz1x-tc-demo
+base.name                                       : quartz1x-tc-demo
+catalina.base                                   : /home/ryanv/.grails/2.0.4/projects/quartz1x-tc-demo/tomcat
+catalina.home                                   : /home/ryanv/.grails/2.0.4/projects/quartz1x-tc-demo/tomcat
+catalina.useNaming                              : true
+disable.grails.plugin.transform                 : false
+file.encoding                                   : UTF-8
+file.encoding.pkg                               : sun.io
+file.separator                                  : /
+grails.buildScope                               : all
+grails.compile.artefacts.closures.convert       : false
+grails.env                                      : development
+grails.env.default                              : true
+grails.env.initializing                         : true
+grails.env.set                                  : true
+grails.home                                     : /opt/grails-2.0.4
+grails.server.factory                           : org.grails.plugins.tomcat.TomcatServerFactory
+grails.version                                  : 2.0.4
+groovy.starter.conf                             : /opt/grails-2.0.4/conf/groovy-starter.conf
+java.awt.graphicsenv                            : sun.awt.X11GraphicsEnvironment
+java.awt.printerjob                             : sun.print.PSPrinterJob
+java.class.path                                 : /opt/grails-2.0.4/lib/org.codehaus.groovy/groovy-all/jars/groovy-all-1.8.6.jar:/opt/grails-2.0.4/dist/grails-bootstrap-2.0.4.jar:/opt/idea-IU-117.117/lib/idea_rt.jar:/opt/idea-IU-117.117/plugins/Groovy/lib/agent/gragent.jar
+java.class.version                              : 51.0
+java.endorsed.dirs                              : /usr/lib/jvm/java-7-oracle/jre/lib/endorsed
+java.ext.dirs                                   : /usr/lib/jvm/java-7-oracle/jre/lib/ext:/usr/java/packages/lib/ext
+java.home                                       : /usr/lib/jvm/java-7-oracle/jre
+java.io.tmpdir                                  : /tmp
+java.library.path                               : .::/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+java.naming.factory.initial                     : org.apache.naming.java.javaURLContextFactory
+java.naming.factory.url.pkgs                    : org.apache.naming
+java.runtime.name                               : Java(TM) SE Runtime Environment
+java.runtime.version                            : 1.7.0_03-b04
+java.specification.name                         : Java Platform API Specification
+java.specification.vendor                       : Oracle Corporation
+java.specification.version                      : 1.7
+java.vendor                                     : Oracle Corporation
+java.vendor.url                                 : http://java.oracle.com/
+java.vendor.url.bug                             : http://bugreport.sun.com/bugreport/
+java.version                                    : 1.7.0_03
+java.vm.info                                    : mixed mode
+java.vm.name                                    : Java HotSpot(TM) 64-Bit Server VM
+java.vm.specification.name                      : Java Virtual Machine Specification
+java.vm.specification.vendor                    : Oracle Corporation
+java.vm.specification.version                   : 1.7
+java.vm.vendor                                  : Oracle Corporation
+java.vm.version                                 : 22.1-b02
+javax.sql.DataSource.Factory                    : org.apache.commons.dbcp.BasicDataSourceFactory
+jna.platform.library.path                       : /lib64
+line.separator                                  : 
+
+net.sf.ehcache.skipUpdateCheck                  : true
+org.hyperic.sigar.path                          : /tmp/tmpSigarJars76010790719717528076118347942603
+org.mortbay.xml.XmlParser.NotValidating         : true
+os.arch                                         : amd64
+os.name                                         : Linux
+os.version                                      : 3.2.0-25-generic
+path.separator                                  : :
+program.name                                    : grails
+server.port                                     : 8090
+springloaded.directoriesContainingReloadableCode: /home/ryanv/gr8conf/quartz1x-tc-demo/target/classes,/home/ryanv/.grails/2.0.4/projects/quartz1x-tc-demo/plugin-classes
+sun.arch.data.model                             : 64
+sun.boot.class.path                             : /usr/lib/jvm/java-7-oracle/jre/lib/resources.jar:/usr/lib/jvm/java-7-oracle/jre/lib/rt.jar:/usr/lib/jvm/java-7-oracle/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-7-oracle/jre/lib/jsse.jar:/usr/lib/jvm/java-7-oracle/jre/lib/jce.jar:/usr/lib/jvm/java-7-oracle/jre/lib/charsets.jar:/usr/lib/jvm/java-7-oracle/jre/classes
+sun.boot.library.path                           : /usr/lib/jvm/java-7-oracle/jre/lib/amd64
+sun.cpu.endian                                  : little
+sun.cpu.isalist                                 : 
+sun.desktop                                     : gnome
+sun.io.unicode.encoding                         : UnicodeLittle
+sun.java.command                                : org.codehaus.groovy.grails.cli.support.GrailsStarter --main org.codehaus.groovy.grails.cli.GrailsScriptRunner --conf /opt/grails-2.0.4/conf/groovy-starter.conf -noreloading run-app -Dserver.port=8090
+sun.java.launcher                               : SUN_STANDARD
+sun.jnu.encoding                                : UTF-8
+sun.management.compiler                         : HotSpot 64-Bit Tiered Compilers
+sun.os.patch.level                              : unknown
+tc.active                                       : true
+tc.dso.globalmode                               : false
+tools.jar                                       : /usr/lib/jvm/java-7-oracle/lib/tools.jar
+user.country                                    : US
+user.dir                                        : /home/ryanv/gr8conf/quartz1x-tc-demo
+user.home                                       : /home/ryanv
+user.language                                   : en
+user.name                                       : ryanv
+user.timezone                                   : America/Chicago
+========================================================================
+2012-07-05 23:46:00,233 [pool-5-thread-1] INFO com.tc.bundles.Resolver - First toolkit reference found: ToolkitVersion(1.1)
+2012-07-05 23:46:00,233 [pool-5-thread-1] INFO com.tc.bundles.Resolver - Freezing toolkit major version from: ToolkitVersion(1.1)
+2012-07-05 23:46:00,238 [pool-5-thread-1] INFO com.tc.bundles.Resolver - new version = 2.1.0
+2012-07-05 23:46:00,239 [pool-5-thread-1] INFO com.tc.bundles.Resolver - Resolved TIM org.terracotta.toolkit:terracotta-toolkit-1.1:2.1.0 from tcjar:__TC__jar:file:/home/ryanv/.grails/ivy-cache/org.terracotta/terracotta-toolkit-1.1-runtime/jars/terracotta-toolkit-1.1-runtime-2.1.0.jar!/TIMs/terracotta-toolkit-1.1-2.1.0.jar__TC__/
+2012-07-05 23:46:00,240 [pool-5-thread-1] INFO com.tc.bundles.Resolver - Actual toolkit API version resolved: ToolkitVersion(1.1) <xml-fragment group-id="org.terracotta.toolkit" name="terracotta-toolkit-1.1" version="2.1.0"/>
+2012-07-05 23:46:00,241 [pool-5-thread-1] INFO com.tc.bundles.Resolver - new version = 2.1.0
+2012-07-05 23:46:00,241 [pool-5-thread-1] INFO com.tc.bundles.Resolver - Resolved TIM org.terracotta.toolkit:terracotta-toolkit-1.1:2.1.0 from tcjar:__TC__jar:file:/home/ryanv/.grails/ivy-cache/org.terracotta/terracotta-toolkit-1.1-runtime/jars/terracotta-toolkit-1.1-runtime-2.1.0.jar!/TIMs/terracotta-toolkit-1.1-2.1.0.jar__TC__/
+2012-07-05 23:46:00,403 [pool-5-thread-1] WARN com.tc.plugins.ModulesLoader - org.terracotta.modules.excludes-config does not declare a TIM API version requirement
+2012-07-05 23:46:00,417 [pool-5-thread-1] WARN com.tc.plugins.ModulesLoader - org.terracotta.modules.guimodels-config does not declare a TIM API version requirement
+2012-07-05 23:46:00,418 [pool-5-thread-1] WARN com.tc.plugins.ModulesLoader - org.terracotta.modules.jdk15-preinst-config does not declare a TIM API version requirement
+2012-07-05 23:46:00,425 [pool-5-thread-1] WARN com.tc.plugins.ModulesLoader - org.terracotta.modules.standard-config does not declare a TIM API version requirement
+2012-07-05 23:46:00,463 [pool-5-thread-1] WARN com.tc.plugins.ModulesLoader - org.terracotta.toolkit.terracotta-toolkit-1.1 does not declare a TIM API version requirement
+2012-07-05 23:46:00,464 [pool-5-thread-1] INFO com.tc.plugins.ModulesLoader - BuildInfo for module: org.terracotta.toolkit.terracotta-toolkit-1.1
+  BuildInfo-User: cruise
+  BuildInfo-Revision: 26432
+  BuildInfo-Timestamp: 20110211-104949
+  BuildInfo-URL: https://svn.terracotta.org/repo/forge/projects/terracotta-toolkit/tags/release-2.1.0/toolkit
+  BuildInfo-Host: kong.terracotta.lan
+
+2012-07-05 23:46:00,475 [pool-5-thread-1] INFO com.tc.plugins.ModulesLoader - Config loaded from module: org.terracotta.toolkit.terracotta-toolkit-1.1 (terracotta_api.xml)
+<?xml version="1.0" encoding="UTF-8"?>
+<xml-fragment>
+  <instrumented-classes>
+    <include>
+      <class-expression>@org.terracotta.annotations.InstrumentedClass *</class-expression>
+    </include>
+    <include>
+      <class-expression>@org.terracotta.annotations.InstrumentedClass @org.terracotta.annotations.HonorTransient *</class-expression>
+      <honor-transient>true</honor-transient>
+    </include>
+  </instrumented-classes>
+
+  <locks>
+    <!-- annotation locking expressions -->
+    <autolock>
+      <method-expression>@org.terracotta.annotations.AutolockWrite * *(..)</method-expression>
+      <lock-level>write</lock-level>
+    </autolock>
+    <autolock auto-synchronized="true">
+      <method-expression>@org.terracotta.annotations.AutolockWriteAutoSync * *(..)</method-expression>
+      <lock-level>write</lock-level>
+    </autolock>    
+    <autolock>
+      <method-expression>@org.terracotta.annotations.AutolockRead * *(..)</method-expression>
+      <lock-level>read</lock-level>
+    </autolock>
+    <autolock auto-synchronized="true">
+      <method-expression>@org.terracotta.annotations.AutolockReadAutoSync * *(..)</method-expression>
+      <lock-level>read</lock-level>
+    </autolock>    
+    <autolock>
+      <method-expression>@org.terracotta.annotations.AutolockSynchronousWrite * *(..)</method-expression>
+      <lock-level>synchronous-write</lock-level>
+    </autolock>
+    <autolock auto-synchronized="true">
+      <method-expression>@org.terracotta.annotations.AutolockSynchronousWriteAutoSync * *(..)</method-expression>
+      <lock-level>synchronous-write</lock-level>
+    </autolock>    
+    <autolock>
+      <method-expression>@org.terracotta.annotations.AutolockConcurrent * *(..)</method-expression>
+      <lock-level>concurrent</lock-level>
+    </autolock>
+  </locks>
+
+  <distributed-methods>
+    <method-expression>@org.terracotta.annotations.DMI * *(..)</method-expression>
+  </distributed-methods>
+
+  <roots>
+    <root>
+      <field-expression>@org.terracotta.annotations.Root * *</field-expression>
+    </root>
+  </roots>
+
+</xml-fragment>
+2012-07-05 23:46:00,528 [pool-5-thread-1] INFO com.tc.plugins.ModulesLoader - Installing tunneled MBean domains for bundle 'org.terracotta.modules.tim-quartz-1.8'
+2012-07-05 23:46:00,528 [pool-5-thread-1] INFO com.tc.plugins.ModulesLoader - BuildInfo for module: org.terracotta.modules.tim-quartz-1.8
+  BuildInfo-User: cruise
+  BuildInfo-Revision: 25116
+  BuildInfo-Timestamp: 20101105-075733
+  BuildInfo-URL: https://svn.terracotta.org/repo/forge/projects/tim-quartz/tags/release-1.4.1/tim-quartz-1.8
+  BuildInfo-Host: kong.terracotta.lan
+
+2012-07-05 23:46:00,532 [pool-5-thread-1] INFO com.tc.plugins.ModulesLoader - Config loaded from module: org.terracotta.modules.tim-quartz-1.8 (terracotta.xml)
+<?xml version="1.0" encoding="UTF-8"?>
+
+  <instrumented-classes>
+    <include>
+      <class-expression>org.terracotta.quartz.ClusteredJobStore</class-expression>
+      <honor-transient>true</honor-transient>
+    </include>
+
+    <include>
+      <class-expression>org.terracotta.quartz.JobWrapper</class-expression>
+      <honor-transient>true</honor-transient>
+    </include>
+
+    <include>
+      <class-expression>org.terracotta.quartz.TriggerWrapper</class-expression>
+      <honor-transient>true</honor-transient>
+    </include>
+
+    <include>
+      <class-expression>org.terracotta.quartz.CalendarWrapper</class-expression>
+      <honor-transient>true</honor-transient>
+    </include>
+
+    <include>
+      <class-expression>org.terracotta.quartz.TriggerKey</class-expression>
+    </include>
+
+    <include>
+      <class-expression>org.terracotta.quartz.JobKey</class-expression>
+    </include>
+
+    <include>
+      <class-expression>org.terracotta.quartz.Key</class-expression>
+    </include>
+
+    <include>
+      <class-expression>org.terracotta.quartz.FiredTrigger</class-expression>
+    </include>
+
+    <include>
+      <class-expression>org.terracotta.quartz.Serializer</class-expression>
+      <honor-transient>true</honor-transient>
+    </include>
+
+  </instrumented-classes>
+
+
+
+2012-07-05 23:46:00,540 [pool-5-thread-1] INFO com.tc.plugins.ModulesLoader - Installing TIMByteProvider for bundle 'org.terracotta.modules.tim-quartz-ui'
+2012-07-05 23:46:00,549 [pool-5-thread-1] INFO com.tc.plugins.ModulesLoader - BuildInfo for module: org.terracotta.modules.tim-quartz-ui
+  BuildInfo-User: cruise
+  BuildInfo-Revision: 25425
+  BuildInfo-Timestamp: 20101105-075644
+  BuildInfo-URL: https://svn.terracotta.org/repo/forge/projects/tim-quartz/tags/release-1.4.1/tim-quartz-ui
+  BuildInfo-Host: kong.terracotta.lan
+
+2012-07-05 23:46:00,589 [pool-5-thread-1] INFO com.terracottatech.dso - Trying to get Cluster topology from http://127.0.1.1:9510/groupinfo
+2012-07-05 23:46:00,608 [pool-5-thread-1] INFO com.terracottatech.dso - Trying to get L1 Reconnect Properties from http://127.0.1.1:9510/l1reconnectproperties
+2012-07-05 23:46:00,634 [pool-5-thread-1] INFO com.tc.net.core.TCComm - Comm Worker Threads NOT requested
+2012-07-05 23:46:00,654 [pool-5-thread-1] INFO com.tc.net.protocol.transport.ConnectionHealthCheckerImpl: DSO Client - HealthChecker Started
+2012-07-05 23:46:00,672 [pool-5-thread-1] INFO com.tc.net.protocol.tcm.CommunicationsManager - HealthCheck CallbackPort Listener started at /0:0:0:0:0:0:0:0:33313
+2012-07-05 23:46:00,696 [pool-5-thread-1] INFO com.tc.object.ApplicatorDNAEncodingImpl - Compressed String constructor not present
+2012-07-05 23:46:00,732 [pool-5-thread-1] INFO com.terracottatech.dso - Statistics buffer opened
+2012-07-05 23:46:00,734 [Statistics Logger] INFO com.terracottatech.dso - memory free : 309218736
+2012-07-05 23:46:00,737 [Statistics Logger] INFO com.terracottatech.dso - memory used : 168014416
+2012-07-05 23:46:00,737 [Statistics Logger] INFO com.terracottatech.dso - memory max : 477233152
+2012-07-05 23:46:00,761 [pool-5-thread-1] INFO com.tc.statistics.StatisticRetrievalAction - "message monitor" statistic is not enabled. Please enable the property "tcm.monitor.delay" to collect this statistics.
+2012-07-05 23:46:00,807 [pool-5-thread-1] INFO com.tc.runtime.TCMemoryManagerImpl - GarbageCollector: PS Scavenge
+2012-07-05 23:46:00,807 [pool-5-thread-1] INFO com.tc.runtime.TCMemoryManagerImpl - GarbageCollector: PS MarkSweep
+2012-07-05 23:46:00,864 [L1Management JMX registration] INFO com.tc.management.L1Management - Terracotta JMX connector available at[service:jmx:terracotta://localhost]
+2012-07-05 23:46:00,951 [pool-5-thread-1] INFO com.tc.net.core.TCConnection - Comms Message Batching enabled
+2012-07-05 23:46:00,959 [pool-5-thread-1] INFO com.tc.net.protocol.transport.ClientMessageTransport - ConnectionID(-1.ffffffffffffffffffffffffffffffff): Attaching new connection: com.tc.net.core.TCConnectionJDK14@379904673: connected: true, closed: false local=127.0.0.1:44587 remote=127.0.1.1:9510 connect=[Thu Jul 05 23:46:00 CDT 2012] idle=7ms [0 read, 0 write]
+2012-07-05 23:46:00,973 [pool-5-thread-1] INFO com.tc.net.protocol.transport.ConnectionHealthCheckerImpl. DSO Client - Health monitoring agent started for ryanv-laptop:9510
+2012-07-05 23:46:00,980 [L1_L2:TCComm Main Selector Thread_R (listen 0:0:0:0:0:0:0:0:33313)] INFO com.tc.net.protocol.transport.ConnectionHealthCheckerImpl. DSO Client - HealthCheckCallbackPort verification PASSED for ryanv-laptop:9510(callbackport: 9510)
+2012-07-05 23:46:00,982 [WorkerThread(client_coordination_stage, 0)] INFO com.tc.object.handshakemanager.ClientHandshakeManagerImpl - ClientID[6]: Connected: Unpausing from State[ PAUSED ] RemoteNode : GroupID[0]. Disconnect count : 1
+2012-07-05 23:46:00,991 [WorkerThread(client_coordination_stage, 0)] INFO com.tc.object.handshakemanager.ClientHandshakeManagerImpl - ClientID[6]: Received Handshake ack for this node :GroupID[0]
+2012-07-05 23:46:00,992 [pool-5-thread-1] INFO com.terracottatech.console - Connection successfully established to server at 127.0.1.1:9510
+2012-07-05 23:46:00,992 [pool-5-thread-1] INFO com.terracottatech.dso - Connection successfully established to server at 127.0.1.1:9510
+2012-07-05 23:46:00,992 [WorkerThread(client_coordination_stage, 0)] INFO com.tc.management.remote.protocol.terracotta.TunnelingEventHandler - Client JMX server ready; sending notification to L2 server
+2012-07-05 23:49:00,853 [ClientLockManager LockGC] INFO com.tc.object.locks.ClientLockManager - ClientID[6]: Lock GC collected 1 garbage locks
+2012-07-06 00:01:00,731 [Statistics Logger] INFO com.terracottatech.dso - memory free : 303021296
+2012-07-06 00:01:00,731 [Statistics Logger] INFO com.terracottatech.dso - memory used : 174211856
+2012-07-06 00:01:00,731 [Statistics Logger] INFO com.terracottatech.dso - memory max : 477233152
+2012-07-06 00:16:00,730 [Statistics Logger] INFO com.terracottatech.dso - memory free : 323147336
+2012-07-06 00:16:00,731 [Statistics Logger] INFO com.terracottatech.dso - memory used : 154085816
+2012-07-06 00:16:00,731 [Statistics Logger] INFO com.terracottatech.dso - memory max : 477233152
+2012-07-06 00:31:00,730 [Statistics Logger] INFO com.terracottatech.dso - memory free : 322609720
+2012-07-06 00:31:00,730 [Statistics Logger] INFO com.terracottatech.dso - memory used : 154623432
+2012-07-06 00:31:00,730 [Statistics Logger] INFO com.terracottatech.dso - memory max : 477233152
+2012-07-06 00:36:48,041 [CommonShutDownHook] INFO com.terracottatech.dso - L1 Exiting...
+2012-07-06 00:36:48,184 [Thread-25] INFO com.terracottatech.dso.runtime - Module framework shut down
+2012-07-06 00:36:48,232 [Thread-25] INFO com.tc.object.tx.RemoteTransactionManagerImpl - ClientID[6]: stop(): took 0 millis to complete
+2012-07-06 00:36:48,232 [Thread-11] INFO com.tc.object.tx.RemoteTransactionManagerImpl - ClientID[6]: stop(): took 0 millis to complete
+2012-07-06 00:36:48,233 [Thread-11] INFO com.tc.net.protocol.transport.ConnectionHealthCheckerImpl: DSO Client - Connection to [ryanv-laptop:9510] CLOSED. Health Monitoring for this node is now disabled.
+2012-07-06 00:36:48,236 [Thread-25] WARN com.tc.net.protocol.transport.ClientMessageTransport - ConnectionID(6.1ae5ed2b25754e9c8d1bc0b1cffd9f0b): Ignoring message sent to non-established transport: Message Class: com.tc.management.remote.protocol.terracotta.JmxRemoteTunnelMessage
+Sealed: true, Header Length: 8, Data Length: 129, Total Length: 137
+Header (com.tc.net.protocol.tcm.TCMessageHeaderImpl)
+	msgType: JMXREMOTE_MESSAGE_CONNECTION_MESSAGE (36), msgVer=0
+Payload:
+	Buffer 0: TCByteBufferJDK14@513402175(java.nio.HeapByteBuffer[pos=0 lim=129 cap=129])
+	129 bytes:
+	00000000: 0000 0002 0102 0002 0000 0075 aced 0005  ...........u....
+	00000010: 7372 002c 6a61 7661 782e 6d61 6e61 6765  sr.,javax.manage
+	00000020: 6d65 6e74 2e72 656d 6f74 652e 6d65 7373  ment.remote.mess
+	00000030: 6167 652e 436c 6f73 654d 6573 7361 6765  age.CloseMessage
+	00000040: 37cf d178 ad05 77da 0200 014c 0003 6d73  7..x..w....L..ms
+	00000050: 6774 0012 4c6a 6176 612f 6c61 6e67 2f53  gt..Ljava/lang/S
+	00000060: 7472 696e 673b 7870 7400 1654 6865 2073  tring;xpt..The s
+	00000070: 6572 7665 7220 6973 2073 746f 7070 6564  erver is stopped
+	00000080: 2e                                       .
+
+2012-07-06 00:36:48,274 [Thread-25] INFO com.tc.net.protocol.transport.ConnectionHealthCheckerImpl: DSO Client - HealthChecker STOP requested
+2012-07-06 00:36:49,189 [HealthChecker] INFO com.tc.net.protocol.transport.ConnectionHealthCheckerImpl: DSO Client - HealthChecker SHUTDOWN
